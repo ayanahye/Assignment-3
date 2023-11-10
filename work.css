@@ -1,0 +1,10 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-exp {
+    display: grid;
+    grid-template-columns: auto auto;
+}
