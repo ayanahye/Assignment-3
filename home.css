@@ -1,0 +1,14 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+.about-educ {
+    display: grid;
+    grid-template-columns: auto auto;
+}
