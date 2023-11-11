@@ -3,27 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="projects.css">
-    <title>Projects</title>
-    <nav class="nav">
-        <h1>Ayana Hussain</h3>
-        <div class="nav-links">
-            <a href="./home.html">Home</a>
-            <a href="./projects.html">Projects</a>
-            <a href="./work.html">Work</a>
+    <title>Project Page</title>
+    <div class="container-cust">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="">
+                <img src="logo-me.png" width="100px" height="500px">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="./home.html">
+                  Home
+                </a>
+          
+                <a class="navbar-item" href="./projects.html">
+                  Projects
+                </a>
+
+                <a class="navbar-item">
+                    Work
+                </a>
+          
+                
+              </div>
+          
+              
+            </div>
+          </nav>
+        <section class="hero is-success is-fullheight">
+            <div class="hero-body">
+
+                <div class="my-text"></div>
+                    <p class="title">
+                    Projects
+                    </p>
+                    <p class="subtitle">
+                    A list of my previous work
+                    </p>
+              </div>
+            </div>
+            
+        </section>
+        <hr class="solid">
+        <section class="hero is-info is-fullheight" id="education">
+            <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <div class="image is-128x128">
+                        <img src="./reading-lib-276.png" alt="Placeholder image" width="50px" height="50px">
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    <p id="black">Reading Library</p>
+                    <a href="#">#Java</a> <a href="#">#Mobile-dev</a> <a href="#">#SQL</a> <a href="#">#Database Querying</a>
+                    <br>
+                    <button id="help-btn" class="button is-info"><a href="https://github.com/ayanahye/mobile-dev-final-project">Github</a></button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <div class="image is-128x128">
+                        <img src="./life-276.png" alt="Placeholder image" width="50px" height="50px">
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    <p id="black">Life Expectancy Analysis</p>
+                    <a href="#">#Python</a> <a href="#">#Pandas</a> <a href="#">#Matplotlib #Numpy</a> <a href="#">#DataAnalysis #DataVisualization</a>
+                    <br>
+                    <button id="help-btn" class="button is-info"><a href="https://github.com/ayanahye/Life-Expectancy-Analysis">Github</a></button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <div class="image is-128x128">
+                        <img src="./weather-276.png" alt="Placeholder image" width="50px" height="50px">
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    <p id="black">Weather App</p>
+                    <a href="#">#JavaScript</a> <a href="#">#CSS</a> <a href="#">#</a> <a href="#">#WeatherAPI #FirstProject</a>
+                    <br>
+                    <button id="help-btn" class="button is-info"><a href="https://ayanasweatherapp.netlify.app/">Demo</a></button>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="card" id="last">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <div class="image is-128x128">
+                        <img src="./chat-276.png" alt="Placeholder image" width="50px" height="50px">
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    <p id="black">Chat Bot</p>
+                    <a href="#">#Flask</a> <a href="#">#Scikit-learn</a> <a href="#">#NLTK</a> <a href="#">#TrainingData #TestingData</a>
+                    <br>
+                    <button id="help-btn" class="button is-info"><a href="http://ayanahye2.pythonanywhere.com/">Demo</a></button>
+                  </div>
+                </div>
+              </div>
+        </section>
         </div>
-    </nav>
-    <div class="project">
-        <img src="" alt="picture of project">
-        <div class="project-info">
-            <h1>Project</h1>
-            <p>Details</p>
-            <button>Repo Link</button>
-        </div>
-    </div>
-    <hr class="solid">
-</head>
-<body>
-    
+    </head>
+    <body>
+        
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            const spark = document.createElement('div');
+            spark.classList.add('spark');
+            spark.style.left = e.pageX + 'px';
+            spark.style.top = e.pageY + 'px';
+            document.body.appendChild(spark);
+
+            spark.addEventListener('animationiteration', function () {
+                document.body.removeChild(spark);
+            });
+        });
+
+        const sectionColors = ['#44BF93', '#3273dc', '#ff3860'];
+
+        document.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const pageTop = window.scrollY;
+            const pageBottom = pageTop + window.innerHeight;
+
+            sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.clientHeight;
+
+            if (pageTop < sectionBottom && pageBottom > sectionTop) {
+
+                const scrollPercentage = (pageTop - sectionTop) / section.clientHeight;
+                
+                const backgroundColor = interpolateColors(
+                sectionColors[index],
+                sectionColors[index + 1],
+                scrollPercentage
+                );
+
+                section.style.backgroundColor = backgroundColor;
+            }
+            });
+        });
+
+
+        function interpolateColors(color1, color2, percentage) {
+            color1 = color1.replace('#', '');
+            color2 = color2.replace('#', '');
+
+            const r1 = parseInt(color1.substr(0, 2), 16);
+            const g1 = parseInt(color1.substr(2, 2), 16);
+            const b1 = parseInt(color1.substr(4, 2), 16);
+
+            const r2 = parseInt(color2.substr(0, 2), 16);
+            const g2 = parseInt(color2.substr(2, 2), 16);
+            const b2 = parseInt(color2.substr(4, 2), 16);
+
+            const r = Math.round(r1 + (r2 - r1) * percentage);
+            const g = Math.round(g1 + (g2 - g1) * percentage);
+            const b = Math.round(b1 + (b2 - b1) * percentage);
+
+            return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+        const contactButton = document.querySelector('.button.is-primary');
+        const educationButton = document.querySelector('.button.is-light');
+        const educationSection = document.getElementById('education');
+        const connectSection = document.getElementById('connect');
+
+        educationButton.addEventListener('click', function() {
+            educationSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        contactButton.addEventListener('click', function() {
+            connectSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+
+    </script>
 </body>
 </html>
