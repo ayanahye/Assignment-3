@@ -3,33 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="work.css">
-    <title>Work and Volunteer</title>
-    <nav class="nav">
-        <h1>Ayana Hussain</h3>
-        <div class="nav-links">
-            <a href="./home.html">Home</a>
-            <a href="./projects.html">Projects</a>
-            <a href="./work.html">Work</a>
+    <title>Work Page</title>
+    <div class="container-cust">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="">
+                <img src="logo-me.png" width="100px" height="500px">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="./home.html">
+                  Home
+                </a>
+          
+                <a class="navbar-item" href="./projects.html">
+                  Projects
+                </a>
+
+                <a class="navbar-item" href="./work.html">
+                    Work
+                </a>
+          
+                
+              </div>
+          
+              
+            </div>
+          </nav>
+        <section class="hero is-success is-fullheight">
+            <div class="hero-body">
+
+                <div class="my-text"></div>
+                    <p class="title">
+                    Work/Volunteer Experiences
+                    </p>
+                    <p class="subtitle">
+                    A list of my experiences
+                    </p>
+              </div>
+            </div>
+            
+        </section>
+        <hr class="solid">
+        <section class="hero is-info is-fullheight" id="education">
+          <div class="card">
+            <div class="card-content">
+              <div class="content">
+                <p id="black" class="subtitle-work"><strong>Data Visualization and Researcher</strong></p>
+                <p id="black">CarboPrint.AI, Burnaby BC</p>
+                <ul>
+                  <li>Developed an interactive map in Python, illustrating current and
+                    historical forest fires
+                  </li>
+                  <li>Researched datasets on forest fires in Canada and cleaned them
+                    to ensure smooth integration into the map
+                  </li>
+                  <li>Leveraged a Python graphing library called Plotly to create a
+                    dynamic map, exhibiting the different areas affects by forest fires
+                    over time
+                  </li>
+                  <li>Participated in weekly meetings to ideate about implementation
+                    details and ways to incorporate a forecasting feature into the
+                    project
+                  </li>
+                  <li>Ensured other team members were familiar with the map and
+                    could seamlessly integrate their work into the map
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="card" id="last">
+            <div class="card-content">
+              <div class="content">
+                <p id="black" class="subtitle-work"><strong>Co-Events Coordinator</strong></p>
+                <p id="black">Women in Computing Science SFU, Burnaby BC</p>
+                <ul>
+                  <li>Responsible for co-planning a variety of social events and
+                    documenting meetings minutes for collaborative events
+                  </li>
+                  <li>Managed room booking, food and accommodation costs to ensure all
+                    attendees were satisfied
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
         </div>
-    </nav>
-    <div class="work-exp">
-        <div class="work-pic">
-            <h1>Experience</h1>
-            <img src="" alt="work-img">
-         </div>
-        <div class="work-info">
-            <p>Details</p>
-            <ul>
-                <li>Roles</li>
-                <li>Skills</li>
-            </ul>
-            <p>Date: </p>
-        </div>
-    </div>
-    <hr class="solid">
-</head>
-<body>
-    
+    </head>
+    <body>
+        
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            const spark = document.createElement('div');
+            spark.classList.add('spark');
+            spark.style.left = e.pageX + 'px';
+            spark.style.top = e.pageY + 'px';
+            document.body.appendChild(spark);
+
+            spark.addEventListener('animationiteration', function () {
+                document.body.removeChild(spark);
+            });
+        });
+
+        const sectionColors = ['#44BF93', '#3273dc', '#ff3860'];
+
+        document.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const pageTop = window.scrollY;
+            const pageBottom = pageTop + window.innerHeight;
+
+            sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.clientHeight;
+
+            if (pageTop < sectionBottom && pageBottom > sectionTop) {
+
+                const scrollPercentage = (pageTop - sectionTop) / section.clientHeight;
+                
+                const backgroundColor = interpolateColors(
+                sectionColors[index],
+                sectionColors[index + 1],
+                scrollPercentage
+                );
+
+                section.style.backgroundColor = backgroundColor;
+            }
+            });
+        });
+
+
+        function interpolateColors(color1, color2, percentage) {
+            color1 = color1.replace('#', '');
+            color2 = color2.replace('#', '');
+
+            const r1 = parseInt(color1.substr(0, 2), 16);
+            const g1 = parseInt(color1.substr(2, 2), 16);
+            const b1 = parseInt(color1.substr(4, 2), 16);
+
+            const r2 = parseInt(color2.substr(0, 2), 16);
+            const g2 = parseInt(color2.substr(2, 2), 16);
+            const b2 = parseInt(color2.substr(4, 2), 16);
+
+            const r = Math.round(r1 + (r2 - r1) * percentage);
+            const g = Math.round(g1 + (g2 - g1) * percentage);
+            const b = Math.round(b1 + (b2 - b1) * percentage);
+
+            return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+        const contactButton = document.querySelector('.button.is-primary');
+        const educationButton = document.querySelector('.button.is-light');
+        const educationSection = document.getElementById('education');
+        const connectSection = document.getElementById('connect');
+
+        educationButton.addEventListener('click', function() {
+            educationSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        contactButton.addEventListener('click', function() {
+            connectSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+
+    </script>
 </body>
 </html>
