@@ -1,14 +1,114 @@
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.project {
-    display: grid;
-    grid-template-columns: auto auto;
-}
 
 hr.solid {
-    border-top: 3px solid #bbb;
+    border-top: 10px solid #bbb;
+    margin: 0;
+}
+
+
+.container-cust {
+    background: rgb(87, 87, 234);
+    background-attachment: fixed;
+    color: white;
+    
+}
+
+/* Create a CSS animation for the spark effect */
+@keyframes spark {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Style the spark element */
+.spark {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0); /* Color of the spark */
+    position: absolute;
+    pointer-events: none; /* Ensures the spark element doesn't interfere with other elements */
+    animation: spark 1s ease-out infinite; /* Apply the spark animation */
+}
+
+.container-cust:hover .spark {
+    animation: spark 1s ease-out infinite; /* Apply the spark animation */
+}
+
+.container-cust:hover {
+    cursor:grabbing;
+}
+
+#spacing {
+    margin-top: 15px;
+}
+
+.section {
+    transition: background-color 0.5s ease;
+  }
+
+
+.title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.subtitle {
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.hero-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    text-align: center;
+}
+
+#black {
+    color: black;
+}
+
+#left {
+    margin-right: 30%;
+}
+
+#right {
+    margin-left: 30%;
+}
+
+.field {
+    width: 60vw;
+}
+
+.button {
+    margin-top: 20px;
+
+}
+
+#help-btn {
+    display: block;
+}
+
+.card {
+    display: flex;
+
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    
+}
+
+
+#last {
+    margin-bottom: 50px;
 }
