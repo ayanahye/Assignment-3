@@ -45,7 +45,7 @@
 
                 <div class="my-text"></div>
                     <p class="title">
-                    Work/Volunteer Experiences
+                    Work/Volunteer Experiences 📚
                     </p>
                     <p class="subtitle">
                     A list of my experiences
@@ -59,7 +59,7 @@
           <div class="card">
             <div class="card-content">
               <div class="content">
-                <p id="black" class="subtitle-work"><strong>Data Visualization and Researcher</strong></p>
+                <p id="black" class="subtitle-work"><strong>Data Visualization and Researcher 🔎</strong></p>
                 <p id="black">CarboPrint.AI, Burnaby BC</p>
                 <ul>
                   <li>Developed an interactive map in Python, illustrating current and
@@ -89,7 +89,7 @@
           <div class="card" id="last">
             <div class="card-content">
               <div class="content">
-                <p id="black" class="subtitle-work"><strong>Co-Events Coordinator</strong></p>
+                <p id="black" class="subtitle-work"><strong>Co-Events Coordinator 🗓️</strong></p>
                 <p id="black">Women in Computing Science SFU, Burnaby BC</p>
                 <ul>
                   <li>Responsible for co-planning a variety of social events and
@@ -182,6 +182,15 @@
         });
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarBurger = document.querySelector('.navbar-burger');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarBurger.addEventListener('click', function () {
+            navbarBurger.classList.toggle('is-active');
+            navbarMenu.classList.toggle('is-active');
+        });
+    });
 
     </script>
 </body>

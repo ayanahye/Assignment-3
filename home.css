@@ -9,7 +9,6 @@ hr.solid {
     background: rgb(87, 87, 234);
     background-attachment: fixed;
     color: white;
-    
 }
 
 /* Create a CSS animation for the spark effect */
@@ -95,3 +94,24 @@ hr.solid {
 
 }
 
+.message-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 30px;
+    width: 600px;
+}
+
+.content {
+    padding-top: 0;
+}
+
+.subtitle2 {
+    font-size: 20px;
+}
+
+#no-line {
+    text-decoration: none;
+}

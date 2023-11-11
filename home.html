@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
     <link rel="stylesheet" href="home.css">
     <title>Home Page</title>
     <div class="container-cust">
@@ -56,15 +57,21 @@
 
                 <div class="my-text"></div>
                     <p class="title">
-                    Greetings, I am Ayana
+                      Greetings, I am Ayana 💻
                     </p>
                     <p class="subtitle">
                     A second year computing science student.
                     </p>
 
-                <img src="my-pic.png" alt="my pic" width="200px" height="200px">
-                <p id="black" class="subtitle">Heres a bit more about me</p>
-                <p id="black" class="about">I know C++/C, Python, JavaScript, HTML/CSS and I am currently learning React.js and Next.js. I went into computing science with the aim of solving problems creatively. I enjoy learning about user centred design and design thinking. I am hopeful about the future and am excited about working on new projects to help society or the environment!</p>
+                <img src="my-pic.jpeg" alt="my pic" width="200px" height="200px">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="content">
+                      <p id="black" class="subtitle2">Heres a bit more about me</p>
+                      <p id="black" class="">I know C++/C, Python, JavaScript, HTML/CSS and I am currently learning React.js and Next.js. I went into computing science with the aim of solving problems creatively. I enjoy learning about user centred design and design thinking. I am hopeful about the future and am excited about working on new projects to help society or the environment!</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -101,12 +108,14 @@
                     </p>
                     <article class="message is-link">
                         <div class="message-body">
-                            <a href = "mailto: ayanahye2@gmail.com">Send Email</a>
+                            <a id="no-line" href = "mailto: ayanahye2@gmail.com">Send Email</a>
+                            <p>📩</p>
                         </div>
                     </article>
                     <article class="message is-link">
                         <div class="message-body">
-                          <a href="https://www.linkedin.com/in/ayana-hussain-a3399a227/?trk=public_profile_browsemap&originalSubdomain=ca">Linkedin</a>
+                          <a id="no-line" href="https://www.linkedin.com/in/ayana-hussain-a3399a227/?trk=public_profile_browsemap&originalSubdomain=ca">Linkedin</a>
+                          <p>🔗</p>
                         </div>
                     </article>
                 </div>
@@ -187,6 +196,16 @@
 
         contactButton.addEventListener('click', function() {
             connectSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarBurger = document.querySelector('.navbar-burger');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarBurger.addEventListener('click', function () {
+            navbarBurger.classList.toggle('is-active');
+            navbarMenu.classList.toggle('is-active');
         });
     });
 
