@@ -11,8 +11,6 @@ hr.solid {
     margin: 0;
 }
 
-
-
 .container-cust {
     color: white;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -26,9 +24,6 @@ hr.solid {
 #spacing {
     margin-top: 15px;
 }
-
-
-
 
 .title {
     font-size: 50px;
