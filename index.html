@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-    
     <title>Home Page</title>
     <link rel="icon" href="./fav-icon.png">
     <div class="container-cust">
@@ -35,8 +34,6 @@
                 <a id="item" class="navbar-item" href="./work.html">
                     Work
                 </a>
-          
-                
               </div>
             </div>
           </nav>
@@ -56,27 +53,8 @@
                 </div>
               </div>
                 <img id='my-pic' src="my-pic.jpeg" alt="my pic" width="200px" height="200px">
-
-              
             </div>
           </section>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <section class="hero is-fullheight" id="hero-section1">
                 <div class="hero-body" id="hi">
                     <p class="title">
@@ -143,45 +121,41 @@
         
     <script>
 
+      document.addEventListener('DOMContentLoaded', function () {
+          const navbarBurger = document.querySelector('.navbar-burger');
+          const navbarMenu = document.querySelector('.navbar-menu');
 
+          navbarBurger.addEventListener('click', function () {
+              navbarBurger.classList.toggle('is-active');
+              navbarMenu.classList.toggle('is-active');
+          });
+      });
 
+      let lastScrollTop = 0;
 
+      document.addEventListener('scroll', function () {
+        const currentScrollTop = window.scrollY;
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbarBurger = document.querySelector('.navbar-burger');
-        const navbarMenu = document.querySelector('.navbar-menu');
+        const isScrollingDown = currentScrollTop > lastScrollTop;
 
-        navbarBurger.addEventListener('click', function () {
-            navbarBurger.classList.toggle('is-active');
-            navbarMenu.classList.toggle('is-active');
-        });
-    });
+        for (let i = 1; i <= 2; i++) {
+          const heroSection = document.getElementById(`hero-section${i}`);
+          const rect = heroSection.getBoundingClientRect();
+          const isSectionVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
 
-    let lastScrollTop = 0;
-
-    document.addEventListener('scroll', function () {
-      const currentScrollTop = window.scrollY;
-
-      const isScrollingDown = currentScrollTop > lastScrollTop;
-
-      for (let i = 1; i <= 2; i++) {
-        const heroSection = document.getElementById(`hero-section${i}`);
-        const rect = heroSection.getBoundingClientRect();
-        const isSectionVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-        if (isSectionVisible) {
-          if (isScrollingDown) {
-            heroSection.classList.remove('fade-out');
-            heroSection.classList.add('fade-in');
-          } else {
-            heroSection.classList.remove('fade-in');
-            heroSection.classList.add('fade-out');
+          if (isSectionVisible) {
+            if (isScrollingDown) {
+              heroSection.classList.remove('fade-out');
+              heroSection.classList.add('fade-in');
+            } else {
+              heroSection.classList.remove('fade-in');
+              heroSection.classList.add('fade-out');
+            }
           }
         }
-      }
 
-      lastScrollTop = currentScrollTop;
-    });
+        lastScrollTop = currentScrollTop;
+      });
 
     </script>
 </body>
