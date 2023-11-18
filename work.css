@@ -5,42 +5,42 @@ hr.solid {
 }
 
 
-.container-cust {
-    background: rgb(87, 87, 234);
-    background-attachment: fixed;
-    color: white;
-    
-}
 
-/* Create a CSS animation for the spark effect */
-@keyframes spark {
+.container-cust {
+    color: white;
+    background: linear-gradient(-45deg, #26987f, #074319, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier;
+
+  }
+  
+  @keyframes gradient {
     0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        transform: translateY(-100px) scale(0);
-        opacity: 0;
+        background-position: 0% 50%;
     }
 }
 
-/* Style the spark element */
-.spark {
-    width: 10px;
-    height: 10px;
-    background-color: rgb(0, 0, 0); /* Color of the spark */
-    position: absolute;
-    pointer-events: none; /* Ensures the spark element doesn't interfere with other elements */
-    animation: spark 1s ease-out infinite; /* Apply the spark animation */
-}
-
-.container-cust:hover .spark {
-    animation: spark 1s ease-out infinite; /* Apply the spark animation */
-}
-
-.container-cust:hover {
-    cursor:grabbing;
-}
+#hero-section {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
 
 #spacing {
     margin-top: 15px;
@@ -54,7 +54,10 @@ hr.solid {
 .title {
     font-size: 50px;
     text-align: center;
+    color: white;
 }
+
+
 
 .subtitle {
     padding-top: 20px;
@@ -104,15 +107,62 @@ hr.solid {
     width: 50vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 200px;
     
 }
 
+.hero-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #61dafb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+    background: none;
+    
+  }
+
+  #card-pop {
+    border: 1px solid #61dafb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); 
+  }
+  
+
+
+.content {
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
 
 #last {
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 .subtitle-work {
     font-size: 25px;
+}
+
+#white {
+    color: white;
+}
+
+strong {
+    color: white;
+}
+
+
+#item:hover {
+    color: #26987f;
 }

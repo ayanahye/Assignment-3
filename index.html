@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    
     <link rel="stylesheet" href="home.css">
+    
     <title>Home Page</title>
     <link rel="icon" href="./fav-icon.png">
     <div class="container-cust">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="">
                 <img src="logo-me.png" width="100px" height="500px">
@@ -24,99 +24,115 @@
           
             <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-start">
-                <a class="navbar-item" href="./index.html">
+                <a id="item" class="navbar-item" href="./index.html">
                   Home
                 </a>
           
-                <a class="navbar-item" href="./projects.html">
+                <a id="item" class="navbar-item" href="./projects.html">
                   Projects
                 </a>
 
-                <a class="navbar-item" href="./work.html">
+                <a id="item" class="navbar-item" href="./work.html">
                     Work
                 </a>
           
                 
               </div>
-          
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-primary">
-                      <strong>Connect</strong>
-                    </a>
-                    <a class="button is-light">
-                      Education
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </nav>
-          <section class="hero is-success is-fullheight">
+          <section class="hero is-fullheight" id="all-my-info">
             <div class="hero-body">
-
-                <div class="my-text"></div>
-                    <p class="title">
-                      Greetings, I am Ayana 💻
-                    </p>
-                    <p class="subtitle">
-                    A second year computing science student.
-                    </p>
-
-                <img src="my-pic.jpeg" alt="my pic" width="200px" height="200px">
+              <div class="body-me">
+                <p class="title">
+                  Greetings, I am Ayana 
+                </p>
                 <div class="card">
                   <div class="card-content">
                     <div class="content">
-                      <p id="black" class="subtitle2">Heres a bit more about me</p>
-                      <p id="black" class="">I know C++/C, Python, JavaScript, HTML/CSS and I am currently learning React.js and Next.js. I went into computing science with the aim of solving problems creatively. I enjoy learning about user centred design and design thinking. I am hopeful about the future and am excited about working on new projects to help society or the environment!</p>
+                      <p class="subtitle2">Heres a bit more about me</p>
+                      <p>I know C++/C, Python, JavaScript, HTML/CSS and I am currently learning React.js and Next.js. I went into computing science with the aim of solving problems creatively. I enjoy learning about user centred design and design thinking. I am hopeful about the future and am excited about working on new projects to help society or the environment!</p>
                     </div>
                   </div>
                 </div>
               </div>
+                <img id='my-pic' src="my-pic.jpeg" alt="my pic" width="200px" height="200px">
+
+              
             </div>
           </section>
-            <hr class="solid">
-            <section class="hero is-info is-halfheight" id="education">
-                <div class="hero-body">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="hero is-fullheight" id="hero-section1">
+                <div class="hero-body" id="hi">
                     <p class="title">
                     Education
                     </p>
-                    <article class="message is-link" id="left">
+                    <article id="card-pop" class="message1" id="left">
                         <div class="message-header">
-                        <p>BSC Computing Science</p>
+                          <p style="font-size: 20px;">BSC Computing Science</p>
+                          <p>2022-2027</p>
                         </div>
                         <div class="message-body">
-                        Simon Fraser University, Burnaby BC
+                          <div class="content-col">
+                            <p style="font-size: 20px;" id="school">Simon Fraser University, Burnaby BC</p>
+                            
+                              <p id="school-info">Current Courses:</p>
+                              <ul>
+                                <li>Software Engineering</li>
+                                <li>User Interface</li>
+                                <li>Database Design</li>
+                                <li style="margin-bottom:20px;">Social Issues in CS</li>
+                              </ul>
+                          </div>
+                          <img src="./computer.png" width="100px" height="100px">
                         </div>
                     </article> 
-                    <article class="message is-link" id="right">
+                    <article id="card-pop" class="message1" id="right">
                         <div class="message-header">
-                        <p>Highschool Diploma</p>
+                          <p style="font-size: 20px;">Highschool Diploma</p>
+                          <p>2017-2022</p>
                         </div>
                         <div class="message-body">
-                        Guildford Park Secondary, Surrey BC
+                          <div class="content-col">
+                            <p style="font-size: 20px;">Guildford Park Secondary, Surrey BC</p>
+                            
+                          </div>
+                          <img src="./book.png" width="100px" height="100px">
                         </div>
                     </article>  
                 </div>
             </section>
-            <hr class="solid">
-            <section class="hero is-danger is-halfheight" id="connect">
+            <section class="hero is-fullheight" id="hero-section2">
                 <div class="hero-body">
-                  <div class="">
+                  <div class="full-connect">
                     <p class="title">
                       Connect with me
                     </p>
-                    <article class="message is-link">
+                    <article id="card-pop" class="message2">
                         <div class="message-body">
                             <a id="no-line" href = "mailto: ayanahye2@gmail.com">Send Email</a>
-                            <p>📩</p>
+                            <img src="./mail.png" width="100px" height="100px">
                         </div>
                     </article>
-                    <article class="message is-link">
+                    <article id="card-pop" class="message3">
                         <div class="message-body">
                           <a id="no-line" href="https://www.linkedin.com/in/ayana-hussain-a3399a227/?trk=public_profile_browsemap&originalSubdomain=ca">Linkedin</a>
-                          <p>🔗</p>
+                          <img src="./link.png" width="100px" height="100px">
                         </div>
                     </article>
                 </div>
@@ -126,79 +142,10 @@
     <body>
         
     <script>
-        document.addEventListener('mousemove', function (e) {
-            const spark = document.createElement('div');
-            spark.classList.add('spark');
-            spark.style.left = e.pageX + 'px';
-            spark.style.top = e.pageY + 'px';
-            document.body.appendChild(spark);
-
-            spark.addEventListener('animationiteration', function () {
-                document.body.removeChild(spark);
-            });
-        });
-
-        const sectionColors = ['#44BF93', '#3273dc', '#ff3860'];
-
-        document.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section');
-            const pageTop = window.scrollY;
-            const pageBottom = pageTop + window.innerHeight;
-
-            sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.clientHeight;
-
-            if (pageTop < sectionBottom && pageBottom > sectionTop) {
-
-                const scrollPercentage = (pageTop - sectionTop) / section.clientHeight;
-                
-                const backgroundColor = interpolateColors(
-                sectionColors[index],
-                sectionColors[index + 1],
-                scrollPercentage
-                );
-
-                section.style.backgroundColor = backgroundColor;
-            }
-            });
-        });
 
 
-        function interpolateColors(color1, color2, percentage) {
-            color1 = color1.replace('#', '');
-            color2 = color2.replace('#', '');
 
-            const r1 = parseInt(color1.substr(0, 2), 16);
-            const g1 = parseInt(color1.substr(2, 2), 16);
-            const b1 = parseInt(color1.substr(4, 2), 16);
 
-            const r2 = parseInt(color2.substr(0, 2), 16);
-            const g2 = parseInt(color2.substr(2, 2), 16);
-            const b2 = parseInt(color2.substr(4, 2), 16);
-
-            const r = Math.round(r1 + (r2 - r1) * percentage);
-            const g = Math.round(g1 + (g2 - g1) * percentage);
-            const b = Math.round(b1 + (b2 - b1) * percentage);
-
-            return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-
-        const contactButton = document.querySelector('.button.is-primary');
-        const educationButton = document.querySelector('.button.is-light');
-        const educationSection = document.getElementById('education');
-        const connectSection = document.getElementById('connect');
-
-        educationButton.addEventListener('click', function() {
-            educationSection.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        contactButton.addEventListener('click', function() {
-            connectSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
 
     document.addEventListener('DOMContentLoaded', function () {
         const navbarBurger = document.querySelector('.navbar-burger');
@@ -210,6 +157,31 @@
         });
     });
 
+    let lastScrollTop = 0;
+
+    document.addEventListener('scroll', function () {
+      const currentScrollTop = window.scrollY;
+
+      const isScrollingDown = currentScrollTop > lastScrollTop;
+
+      for (let i = 1; i <= 2; i++) {
+        const heroSection = document.getElementById(`hero-section${i}`);
+        const rect = heroSection.getBoundingClientRect();
+        const isSectionVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isSectionVisible) {
+          if (isScrollingDown) {
+            heroSection.classList.remove('fade-out');
+            heroSection.classList.add('fade-in');
+          } else {
+            heroSection.classList.remove('fade-in');
+            heroSection.classList.add('fade-out');
+          }
+        }
+      }
+
+      lastScrollTop = currentScrollTop;
+    });
 
     </script>
 </body>
