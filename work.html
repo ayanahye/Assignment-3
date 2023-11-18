@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="globals.css">
     <title>Work Page</title>
     <link rel="icon" href="./fav-icon.png">
     <div class="container-cust">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="">
                 <img src="logo-me.png" width="100px" height="500px">
@@ -23,15 +24,15 @@
           
             <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-start">
-                <a class="navbar-item" href="./index.html">
+                <a id="item" class="navbar-item" href="./index.html">
                   Home
                 </a>
           
-                <a class="navbar-item" href="./projects.html">
+                <a id="item" class="navbar-item" href="./projects.html">
                   Projects
                 </a>
 
-                <a class="navbar-item" href="./work.html">
+                <a id="item" class="navbar-item" href="./work.html">
                     Work
                 </a>
           
@@ -41,27 +42,24 @@
               
             </div>
           </nav>
-        <section class="hero is-success is-fullheight">
+        <section class="hero is-fullheight">
             <div class="hero-body">
 
-                <div class="my-text"></div>
                     <p class="title">
-                    Work/Volunteer Experiences 📚
+                    Work/Volunteer Experiences
                     </p>
-                    <p class="subtitle">
+                    <p class="subtitle" id="white">
                     A list of my experiences
                     </p>
               </div>
-            </div>
             
         </section>
-        <hr class="solid">
-        <section class="hero is-info is-fullheight" id="education">
+        <section class="hero is-fullheight" id="education">
           <div class="card">
-            <div class="card-content">
+            <div class="card-content" id="hero-section1">
               <div class="content">
-                <p id="black" class="subtitle-work"><strong>Data Visualization and Researcher 🔎</strong></p>
-                <p id="black">CarboPrint.AI, Burnaby BC</p>
+                <p id="white" class="subtitle-work"><strong>Data Visualization and Researcher</strong></p>
+                <p id="white">CarboPrint.AI, Burnaby BC</p>
                 <ul>
                   <li>Developed an interactive map in Python, illustrating current and
                     historical forest fires
@@ -88,10 +86,10 @@
 
 
           <div class="card" id="last">
-            <div class="card-content">
+            <div class="card-content" id="hero-section2">
               <div class="content">
-                <p id="black" class="subtitle-work"><strong>Co-Events Coordinator 🗓️</strong></p>
-                <p id="black">Women in Computing Science SFU, Burnaby BC</p>
+                <p id="white" class="subtitle-work"><strong>Co-Events Coordinator</strong></p>
+                <p id="white">Women in Computing Science SFU, Burnaby BC</p>
                 <ul>
                   <li>Responsible for co-planning a variety of social events and
                     documenting meetings minutes for collaborative events
@@ -109,81 +107,7 @@
     <body>
         
     <script>
-        document.addEventListener('mousemove', function (e) {
-            const spark = document.createElement('div');
-            spark.classList.add('spark');
-            spark.style.left = e.pageX + 'px';
-            spark.style.top = e.pageY + 'px';
-            document.body.appendChild(spark);
-
-            spark.addEventListener('animationiteration', function () {
-                document.body.removeChild(spark);
-            });
-        });
-
-        const sectionColors = ['#44BF93', '#3273dc', '#ff3860'];
-
-        document.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section');
-            const pageTop = window.scrollY;
-            const pageBottom = pageTop + window.innerHeight;
-
-            sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.clientHeight;
-
-            if (pageTop < sectionBottom && pageBottom > sectionTop) {
-
-                const scrollPercentage = (pageTop - sectionTop) / section.clientHeight;
-                
-                const backgroundColor = interpolateColors(
-                sectionColors[index],
-                sectionColors[index + 1],
-                scrollPercentage
-                );
-
-                section.style.backgroundColor = backgroundColor;
-            }
-            });
-        });
-
-
-        function interpolateColors(color1, color2, percentage) {
-            color1 = color1.replace('#', '');
-            color2 = color2.replace('#', '');
-
-            const r1 = parseInt(color1.substr(0, 2), 16);
-            const g1 = parseInt(color1.substr(2, 2), 16);
-            const b1 = parseInt(color1.substr(4, 2), 16);
-
-            const r2 = parseInt(color2.substr(0, 2), 16);
-            const g2 = parseInt(color2.substr(2, 2), 16);
-            const b2 = parseInt(color2.substr(4, 2), 16);
-
-            const r = Math.round(r1 + (r2 - r1) * percentage);
-            const g = Math.round(g1 + (g2 - g1) * percentage);
-            const b = Math.round(b1 + (b2 - b1) * percentage);
-
-            return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-
-        const contactButton = document.querySelector('.button.is-primary');
-        const educationButton = document.querySelector('.button.is-light');
-        const educationSection = document.getElementById('education');
-        const connectSection = document.getElementById('connect');
-
-        educationButton.addEventListener('click', function() {
-            educationSection.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        contactButton.addEventListener('click', function() {
-            connectSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('DOMContentLoaded', function () {
         const navbarBurger = document.querySelector('.navbar-burger');
         const navbarMenu = document.querySelector('.navbar-menu');
 
@@ -192,6 +116,33 @@
             navbarMenu.classList.toggle('is-active');
         });
     });
+
+    let lastScrollTop = 0;
+
+    document.addEventListener('scroll', function () {
+      const currentScrollTop = window.scrollY;
+
+      const isScrollingDown = currentScrollTop > lastScrollTop;
+
+      for (let i = 1; i <= 2; i++) {
+        const heroSection = document.getElementById(`hero-section${i}`);
+        const rect = heroSection.getBoundingClientRect();
+        const isSectionVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isSectionVisible) {
+          if (isScrollingDown) {
+            heroSection.classList.remove('fade-out');
+            heroSection.classList.add('fade-in');
+          } else {
+            heroSection.classList.remove('fade-in');
+            heroSection.classList.add('fade-out');
+          }
+        }
+      }
+
+      lastScrollTop = currentScrollTop;
+    });
+
 
     </script>
 </body>

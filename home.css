@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+}
+
+.hero {
+    margin: 0;
+}
 
 hr.solid {
     border-top: 10px solid #bbb;
@@ -5,54 +12,28 @@ hr.solid {
 }
 
 
+
 .container-cust {
-    background: rgb(87, 87, 234);
-    background-attachment: fixed;
     color: white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier;
+
 }
 
-/* Create a CSS animation for the spark effect */
-@keyframes spark {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100px) scale(0);
-        opacity: 0;
-    }
-}
-
-/* Style the spark element */
-.spark {
-    width: 10px;
-    height: 10px;
-    background-color: rgb(0, 0, 0); /* Color of the spark */
-    position: absolute;
-    pointer-events: none; /* Ensures the spark element doesn't interfere with other elements */
-    animation: spark 1s ease-out infinite; /* Apply the spark animation */
-}
-
-.container-cust:hover .spark {
-    animation: spark 1s ease-out infinite; /* Apply the spark animation */
-}
-
-.container-cust:hover {
-    cursor:grabbing;
-}
 
 #spacing {
     margin-top: 15px;
 }
 
-.section {
-    transition: background-color 0.5s ease;
-  }
+
 
 
 .title {
     font-size: 50px;
     text-align: center;
+    color: white;
 }
 
 .subtitle {
@@ -63,14 +44,17 @@ hr.solid {
 
 .hero-body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+#hi {
+    flex-direction: column;
 }
 
 .about {
     text-align: center;
-    width: 60%;
+
 }
 
 #black {
@@ -101,11 +85,12 @@ hr.solid {
 
 .card {
     margin-top: 30px;
-    width: 600px;
+    max-width: 600px;
 }
 
 .content {
     padding-top: 0;
+    color: white;
 }
 
 .subtitle2 {
@@ -113,5 +98,155 @@ hr.solid {
 }
 
 #no-line {
-    text-decoration: none;
+    text-decoration: underline;
+    color: white;
+
 }
+
+#no-line:hover {
+    color: #26987f;
+}
+
+.body-me {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#my-pic {
+    margin-left: 20px;
+}
+
+.card {
+    background: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .body-me {
+      width: 100%;
+
+      margin: 50px 0px;
+
+    }
+  
+    #my-pic {
+      margin-top: 120px; 
+    }
+    
+  }
+
+#item:hover {
+    color: #26987f;
+}
+
+
+.container-cust {
+    background: linear-gradient(-45deg, #26987f, #074319, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  
+
+  .card {
+    color: #61dafb;
+    border: 1px solid #61dafb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #card-pop {
+    color: #61dafb;
+    border: 1px solid #61dafb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+    background-color: none;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); 
+  }
+  
+
+.card:hover, .message1:hover, .message2:hover, .message3:hover {
+    transform: translateY(-10px);
+}
+
+.message-body {
+    background: none;
+    color: white;
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    align-items: center;
+    
+}
+
+.message1 {
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.message2, .message3 {
+    margin-bottom: 50px;
+}
+
+.message-header {
+    background: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.full-connect {
+    width: 80%;
+}
+
+.message2 {
+    margin-right: auto;
+}
+
+#hero-section {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .content-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+li {
+    margin-left: 100px;
+}
+
+#school-info {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#school {
+    margin-top: 20px;
+}
+  
