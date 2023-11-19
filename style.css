@@ -99,7 +99,9 @@ hr.solid {
 }
 
 #no-line:hover {
-    color: #26987f;
+    color: #000000;
+    font-weight: 50px;
+    -webkit-text-stroke: 1px #71ddc6;
 }
 
 .body-me {
@@ -117,7 +119,7 @@ hr.solid {
     color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .body-me {
       width: 100%;
 
@@ -134,11 +136,16 @@ hr.solid {
     #my-pic {
       margin-top: 120px; 
     }
+
+    #images {
+        display: none;
+    }
     
   }
 
 #item:hover {
     color: #26987f;
+    
 }
 
 
@@ -176,6 +183,7 @@ hr.solid {
     background-color: none;
     display: flex;
     flex-direction: column;
+    
   }
   
   .card:hover {
@@ -242,6 +250,7 @@ hr.solid {
 
 li {
     margin-left: 100px;
+    list-style: circle;
 }
 
 #school-info {
@@ -252,6 +261,7 @@ li {
 #school {
     margin-top: 20px;
 }
+
 
 
   
