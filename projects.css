@@ -151,3 +151,28 @@ a {
 #item:hover {
     color: #26987f;
 }
+
+@media screen and (max-width: 700px) {
+    .card-content {
+        word-wrap: break-word;
+        border: 1px solid #61dafb;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        background: none;
+    }
+
+    .card {
+        background: none;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        
+      }
+
+      #card-pop {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    
+  }
